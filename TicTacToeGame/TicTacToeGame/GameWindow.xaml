@@ -1,0 +1,54 @@
+﻿<Window x:Class="TicTacToeGame.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Крестики-нолики" WindowState="Maximized" WindowStyle="None" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="DarkGray"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#202020">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- For the text blocks -->
+            <RowDefinition Height="*"/>
+            <!-- For the buttons grid -->
+            <RowDefinition Height="Auto"/>
+            <!-- For the menu return button -->
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" VerticalAlignment="Center">
+            <TextBlock Text="Timer: 00:00" HorizontalAlignment="Center" FontSize="24" Foreground="White" Name="txtTimer"/>
+            <TextBlock Text="Счет: Игрок 0 - Компьютер 0" HorizontalAlignment="Center" FontSize="24" Foreground="White" Name="txtScore"/>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="button0_0" Grid.Row="0" Grid.Column="0" FontSize="36" Click="Button_Click" Style="{StaticResource ButtonStyle}"/>
+            <Button x:Name="button0_1" Grid.Row="0" Grid.Column="1" FontSize="36" Click="Button_Click" Style="{StaticResource ButtonStyle}"/>
+            <Button x:Name="button0_2" Grid.Row="0" Grid.Column="2" FontSize="36" Click="Button_Click" Style="{StaticResource ButtonStyle}"/>
+            <Button x:Name="button1_0" Grid.Row="1" Grid.Column="0" FontSize="36" Click="Button_Click" Style="{StaticResource ButtonStyle}"/>
+            <Button x:Name="button1_1" Grid.Row="1" Grid.Column="1" FontSize="36" Click="Button_Click" Style="{StaticResource ButtonStyle}"/>
+            <Button x:Name="button1_2" Grid.Row="1" Grid.Column="2" FontSize="36" Click="Button_Click" Style="{StaticResource ButtonStyle}"/>
+            <Button x:Name="button2_0" Grid.Row="2" Grid.Column="0" FontSize="36" Click="Button_Click" Style="{StaticResource ButtonStyle}"/>
+            <Button x:Name="button2_1" Grid.Row="2" Grid.Column="1" FontSize="36" Click="Button_Click" Style="{StaticResource ButtonStyle}"/>
+            <Button x:Name="button2_2" Grid.Row="2" Grid.Column="2" FontSize="36" Click="Button_Click" Style="{StaticResource ButtonStyle}"/>
+        </Grid>
+        <Button Grid.Row="2" Content="Вернуться в главное меню" FontSize="18" HorizontalAlignment="Center" Margin="20" Click="GoBackToMenu"/>
+    </Grid>
+</Window>
+
+

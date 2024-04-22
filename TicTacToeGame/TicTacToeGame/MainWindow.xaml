@@ -1,0 +1,15 @@
+﻿<Window x:Class="TicTacToe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Крестики-нолики" WindowState="Maximized" WindowStyle="None">
+    <Grid Background="#333">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="btnPlayOffline" Content="Играть офлайн" Margin="20" Padding="10" FontSize="24"
+                    Background="#007ACC" Foreground="White" BorderBrush="Transparent" Cursor="Hand" Click="btnPlayOffline_Click"/>
+            <Button x:Name="btnPlayOnline" Content="Играть онлайн" Margin="20" Padding="10" FontSize="24"
+                    Background="#007ACC" Foreground="White" BorderBrush="Transparent" Cursor="Hand" Click="btnPlayOnline_Click"/>
+            <Button x:Name="btnExit" Content="Выйти" Margin="20" Padding="10" FontSize="24"
+                    Background="#FF6347" Foreground="White" BorderBrush="Transparent" Cursor="Hand" Click="btnExit_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
